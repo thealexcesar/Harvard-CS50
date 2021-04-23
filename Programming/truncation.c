@@ -1,7 +1,7 @@
-// Truncation
-
 #include <stdio.h>
-
+/**
+ * @return convert int to float
+ */
 int main(void)
 {
     int x, y;
@@ -11,8 +11,7 @@ int main(void)
     scanf("%i", &x);
     printf("y: ");
     scanf("%i", &y);
-    
-    // Convert int to float
+
     z = (float) x / (float) y;
     printf("%.2f\n", z);
 }
