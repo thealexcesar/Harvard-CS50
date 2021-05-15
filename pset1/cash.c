@@ -1,40 +1,42 @@
-#include <stdlib.h>
+#include <cs50.h>
 #include <stdio.h>
-#include <ctype.h>
 #include <math.h>
 /**
- * A greedy algorithm.
  * A program that first asks the user how much change
  * is owed and then prints the minimum number of coins.
  * @author thealexcesar
  */
+
+
 int main(void)
 {
     float change;
-    do {
-        printf("Change owed: ");
-        scanf("%f", &change);
+    do
+    {
+        change = get_float("Change owed: ");
     }      
-    while (change < 0 );
+    while (change < 0);
     
-    // Convert to int
-    float coins;
-    coins = change * 100; 
+    //convert change to int
+    int coins = round(change * 100);
     
-    // Find out how many of each coin
+    //find out how many of each coin
     int counter = 0;
-    while (coins >= 25) {
-        coins -= 25;
+    while (coins > 24)
+    {
+        coins = coins - 25;
         counter ++;
     }
-    while (coins > 9) {
-        coins -= 10;
+    while (coins > 9)
+    {
+        coins = coins - 10;
         counter ++;
     }
-    while (coins > 4) {
-        coins -= 5;
+    while (coins > 4)
+    {
+        coins = coins - 5;
         counter ++;
     }
-    counter += coins;
+    counter = counter + coins;
     printf("%i\n", counter);
 }

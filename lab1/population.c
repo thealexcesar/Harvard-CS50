@@ -1,5 +1,12 @@
 #include <stdio.h>
-
+/**
+ * By CS50. 
+ * A program to calculate Complete the implementation of population.c,
+ * such that it calculates the number of years required for the population
+ * to grow from the start size to the end size.
+ * @see https://cs50.harvard.edu/x/2021/labs/1/population/
+ * @author alex cesar
+ */
 int main(void)
 {
     int start, end, years = 0;
@@ -17,9 +24,11 @@ int main(void)
         scanf("%i", &end);
         printf("%i\n", end);
     }
-    while (end < start); // Requesting end > start
+    // Requesting end > start
+    while (end < start); 
     
-    while (start < end) // Using formula
+    // Using formula
+    while (start < end)
     {
         start = start + (start / 3) - (start / 4);
         years++;

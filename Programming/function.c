@@ -1,7 +1,5 @@
 #include <stdio.h>
-/**
- * @param Functions
- */
+// Functions
 void input();
 void Log();
 
@@ -11,17 +9,17 @@ int main(void)
     input();
 }
 
-void input()
+void input(char s[])
 {
-    char string[10];
+    char string[30];
     {
-        printf("Name: ");
-        scanf("%s", string);
+        printf("%s", s);
+        fgets(string, 30, stdin);
     }
-    printf("\nHello, %s\n\n", string);
+    printf("\nHello, %s!\n\n", string);
 }
 
-void Log(char s[22])
+void Log(char s[])
 {
     printf("%s", s);
 }
