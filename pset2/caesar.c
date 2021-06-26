@@ -1,5 +1,6 @@
 /**
- * A program to use caesar cipher
+ * A program to use caesar cipher using args
+ * c = (p + k) % 26
  * @see https://cs50.harvard.edu/x/2021/psets/2/caesar/
  * @author thealexcesar
  */
@@ -10,29 +11,16 @@
 
 /* int upperbound(char c); */
 
-int main(void)
+int main(int argc, char argv[])
 {
-    char plaintext[] = 0; 
+    char plaintext[]; 
     printf("plaintext: ");
     scanf("%s", &plaintext);
     printf("%s", plaintext);
 
-}
 
-/*     if(argc == 2)
-    {
-        int digits = strlen(argv[1]);
-        bool isnum = true;
-        for(int i = 0; i < digits; i++)
-        {
-            if(isdigit(argv[1][i]) == 0)
-            {
-                isnum = false;
- //             printf("isnum %i false", i);
-                break;
-            }
-        }
-        if(isnum == true)
+}
+/*      if(isnum == true)
         {
             int rotateby = atoi(argv[1]) % 26; */
 
